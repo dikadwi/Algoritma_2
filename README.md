@@ -1,4 +1,4 @@
-```markdown
+````markdown
 # 🛒 Point Market - Java GUI CRUD Application
 
 **Point Market** adalah aplikasi desktop berbasis Java Swing dengan fitur CRUD untuk mengelola pengguna, produk, dan transaksi penukaran poin. Aplikasi ini menggunakan MySQL sebagai basis data dan dirancang sebagai simulasi sistem marketplace berbasis poin.
@@ -9,9 +9,9 @@
 
 - ✅ **Manajemen User** (Create, Read, Update, Delete)
 - ✅ **Manajemen Produk** (Create, Read, Update, Delete)
-- ✅ **Manajemen Transaksi** (Tambah transaksi penukaran poin)
+- ✅ **Manajemen Transaksi** (Create, Read, Update, Delete)
 - ✅ **Dashboard** (Ringkasan jumlah dan riwayat transaksi)
-- ✅ **Validasi Input dan Tampilan Dialog**
+- ✅ **Validasi Input dan Tampilan Menggunakan Dialog**
 - ✅ **Interaksi antar tab melalui tombol Detail**
 
 ---
@@ -21,24 +21,7 @@
 - **Java SE** (Swing, AWT)
 - **MySQL** (Database)
 - **JDBC** (Koneksi database)
-- **NetBeans / IntelliJ / VS Code** (IDE disarankan)
-
----
-
-## 📦 Struktur Folder
-```
-
-├── src/
-│ ├── db/
-│ │ └── DBConnection.java # Koneksi ke MySQL
-│ └── gui/
-│ ├── Main.java # Entry point aplikasi
-│ ├── DashboardPanel.java # Dashboard ringkasan data
-│ ├── UserPanel.java # Panel manajemen user
-│ ├── ProdukPanel.java # Panel manajemen produk
-│ └── TransaksiPanel.java # Panel transaksi poin
-
-````
+- **VS Code**
 
 ---
 
@@ -69,6 +52,7 @@ CREATE TABLE transaksi (
   FOREIGN KEY (user_id) REFERENCES user(user_id),
   FOREIGN KEY (produk_id) REFERENCES produk(produk_id)
 );
+```
 ````
 
 ---
@@ -78,7 +62,7 @@ CREATE TABLE transaksi (
 1. **Klon repositori ini**:
 
    ```bash
-   git clone https://github.com/username/point-market.git
+   git clone https://github.com/dikadwi/Algoritma_2
    ```
 
 2. **Import project** ke IDE Java kamu.
