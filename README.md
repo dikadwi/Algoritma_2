@@ -1,4 +1,6 @@
 ````markdown
+---
+
 # 🛒 Point Market - Java GUI CRUD Application
 
 **Point Market** adalah aplikasi desktop berbasis Java Swing dengan fitur CRUD untuk mengelola pengguna, produk, dan transaksi penukaran poin. Aplikasi ini menggunakan MySQL sebagai basis data dan dirancang sebagai simulasi sistem marketplace berbasis poin.
@@ -77,6 +79,7 @@ CREATE TABLE transaksi (
 5. **Jalankan `Main.java`** sebagai Java Application.
 
 ---
+
 
 ## ✍️ Kontributor
 
