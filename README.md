@@ -1,5 +1,3 @@
----
-
 # 🛒 Point Market - Aplikasi Desktop Java GUI CRUD
 
 **Point Market** adalah aplikasi desktop berbasis **Java Swing** yang dirancang sebagai simulasi sistem **marketplace berbasis poin**. Aplikasi ini memungkinkan pengguna untuk mengelola **data user, produk, dan transaksi penukaran poin** melalui antarmuka grafis yang interaktif.
