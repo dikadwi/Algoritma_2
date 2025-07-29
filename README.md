@@ -1,33 +1,51 @@
-````markdown
 ---
 
-# 🛒 Point Market - Java GUI CRUD Application
+# 🛒 Point Market - Aplikasi Desktop Java GUI CRUD
 
-**Point Market** adalah aplikasi desktop berbasis Java Swing dengan fitur CRUD untuk mengelola pengguna, produk, dan transaksi penukaran poin. Aplikasi ini menggunakan MySQL sebagai basis data dan dirancang sebagai simulasi sistem marketplace berbasis poin.
+**Point Market** adalah aplikasi desktop berbasis **Java Swing** yang dirancang sebagai simulasi sistem **marketplace berbasis poin**. Aplikasi ini memungkinkan pengguna untuk mengelola **data user, produk, dan transaksi penukaran poin** melalui antarmuka grafis yang interaktif.
 
 ---
 
 ## 🚀 Fitur Utama
 
-- ✅ **Manajemen User** (Create, Read, Update, Delete)
-- ✅ **Manajemen Produk** (Create, Read, Update, Delete)
-- ✅ **Manajemen Transaksi** (Create, Read, Update, Delete)
-- ✅ **Dashboard** (Ringkasan jumlah dan riwayat transaksi)
-- ✅ **Validasi Input dan Tampilan Menggunakan Dialog**
-- ✅ **Interaksi antar tab melalui tombol Detail**
+- ✅ **Manajemen User**
+
+  - Tambah, lihat, ubah, dan hapus data pengguna
+
+- ✅ **Manajemen Produk**
+
+  - CRUD untuk daftar produk dan pengaturan stok
+
+- ✅ **Manajemen Transaksi**
+
+  - Manajemen transaksi antar user dan produk
+
+- ✅ **Dashboard**
+
+  - Tampilkan ringkasan jumlah user, produk, dan transaksi
+
+- ✅ **Validasi Input**
+
+  - Cek kelengkapan dan kevalidan data input sebelum diproses
+
+- ✅ **Navigasi Antar Tab**
+
+  - Tombol "Detail" antar tab untuk eksplorasi data lanjutan
 
 ---
 
 ## 🧰 Teknologi yang Digunakan
 
-- **Java SE** (Swing, AWT)
-- **MySQL** (Database)
-- **JDBC** (Koneksi database)
-- **VS Code**
+| Teknologi  | Deskripsi                                   |
+| ---------- | ------------------------------------------- |
+| 🖥️ Java SE | Swing & AWT untuk GUI                       |
+| 🛢️ MySQL   | Sistem manajemen basis data relasional      |
+| 🔌 JDBC    | Koneksi antara Java dan MySQL               |
+| 🛠️ VS Code | Editor kode utama untuk pengembangan proyek |
 
 ---
 
-## 💽 Struktur Tabel MySQL
+## 💽 Struktur Basis Data MySQL
 
 ```sql
 CREATE TABLE user (
@@ -55,31 +73,42 @@ CREATE TABLE transaksi (
   FOREIGN KEY (produk_id) REFERENCES produk(produk_id)
 );
 ```
-````
 
 ---
 
-## ⚙️ Cara Menjalankan
+## 📦 Cara Menjalankan Aplikasi
 
-1. **Klon repositori ini**:
+1. **Kompilasi seluruh file `.java`**:
 
    ```bash
-   git clone https://github.com/dikadwi/Algoritma_2
+   javac -d bin -cp lib/mysql-connector-java-x.x.x.jar src/**/*.java
    ```
 
-2. **Import project** ke IDE Java kamu.
+2. **Buat file JAR**:
 
-3. **Siapkan database** `gui` di MySQL:
+   ```bash
+   jar --create --file=PointMarketApp.jar --main-class=Main -C bin .
+   ```
 
-   - Buat database `gui`
-   - Jalankan SQL di atas
+3. **Jalankan aplikasi**:
 
-4. **Pastikan MySQL Connector** (`mysql-connector-java-x.x.x.jar`) sudah ada di classpath/project library.
+   ```bash
+   java -jar PointMarketApp.jar
+   ```
 
-5. **Jalankan `Main.java`** sebagai Java Application.
+   **Jalankan `Main.java`** sebagai Java Application.
+
+> 🔔 Pastikan file `mysql-connector-java` telah ditambahkan ke classpath agar koneksi ke database berhasil.
 
 ---
 
+## 📌 Catatan Tambahan
+
+- Database harus dibuat dan diisi terlebih dahulu sebelum menjalankan aplikasi.
+- File konfigurasi koneksi database berada di kelas `DBConnection.java`.
+- Seluruh fitur CRUD menggunakan komponen Swing dan `PreparedStatement` untuk keamanan terhadap SQL Injection.
+
+---
 
 ## ✍️ Kontributor
 
