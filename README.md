@@ -1,5 +1,3 @@
----
-
 ```markdown
 # 🛒 Point Market - Java GUI CRUD Application
 
@@ -28,7 +26,6 @@
 ---
 
 ## 📦 Struktur Folder
-
 ```
 
 ├── src/
@@ -41,7 +38,7 @@
 │ ├── ProdukPanel.java # Panel manajemen produk
 │ └── TransaksiPanel.java # Panel transaksi poin
 
-```
+````
 
 ---
 
@@ -72,7 +69,7 @@ CREATE TABLE transaksi (
   FOREIGN KEY (user_id) REFERENCES user(user_id),
   FOREIGN KEY (produk_id) REFERENCES produk(produk_id)
 );
-```
+````
 
 ---
 
