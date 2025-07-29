@@ -1,5 +1,0 @@
-Compile :
-javac -cp ".;lib/mysql-connector-java-9.4.0.jar" db\DBConnection.java gui\*.java model\*.java util\Validator.java Main.java
-
-Run :
-java -cp ".;lib/mysql-connector-java-9.4.0.jar" Main
